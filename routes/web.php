@@ -1,7 +1,8 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BookController;
 
 
 /*
@@ -25,3 +26,6 @@ Route::get('/contact',function(){
 return view('contact');
 })->name('contact');
 
+Route::get('testing',[Controller::class,'testing'])->name('testing');
+
+Route::get('books',[BookController::class,'index'])->name('books');

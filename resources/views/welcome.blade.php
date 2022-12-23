@@ -95,60 +95,17 @@
         <hr class="w-25 mx-auto bg-primary">
     </div>
     <div class="row g-5">
+        @foreach($service as $service)
         <div class="col-lg-4 col-md-6">
             <div class="service-item bg-secondary text-center px-5">
                 <div class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
                     <i class="fa fa-user-tie fa-2x"></i>
                 </div>
-                <h3 class="mb-3">Business Research</h3>
-                <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor ipsum amet eos erat ipsum lorem et sit sed stet lorem</p>
+                <h3 class="mb-3">{{$service->name}}</h3>
+                <p class="mb-0">{{$service->content}}</p>
             </div>
         </div>
-        <div class="col-lg-4 col-md-6">
-            <div class="service-item bg-secondary text-center px-5">
-                <div class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
-                    <i class="fa fa-chart-pie fa-2x"></i>
-                </div>
-                <h3 class="mb-3">Stretagic Planning</h3>
-                <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor ipsum amet eos erat ipsum lorem et sit sed stet lorem</p>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-            <div class="service-item bg-secondary text-center px-5">
-                <div class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
-                    <i class="fa fa-chart-line fa-2x"></i>
-                </div>
-                <h3 class="mb-3">Market Analysis</h3>
-                <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor ipsum amet eos erat ipsum lorem et sit sed stet lorem</p>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-            <div class="service-item bg-secondary text-center px-5">
-                <div class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
-                    <i class="fa fa-chart-area fa-2x"></i>
-                </div>
-                <h3 class="mb-3">Financial Analaysis</h3>
-                <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor ipsum amet eos erat ipsum lorem et sit sed stet lorem</p>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-            <div class="service-item bg-secondary text-center px-5">
-                <div class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
-                    <i class="fa fa-balance-scale fa-2x"></i>
-                </div>
-                <h3 class="mb-3">legal Advisory</h3>
-                <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor ipsum amet eos erat ipsum lorem et sit sed stet lorem</p>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-            <div class="service-item bg-secondary text-center px-5">
-                <div class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
-                    <i class="fa fa-house-damage fa-2x"></i>
-                </div>
-                <h3 class="mb-3">Tax & Insurance</h3>
-                <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor ipsum amet eos erat ipsum lorem et sit sed stet lorem</p>
-            </div>
-        </div>
+       @endforeach
     </div>
 </div>
 <!-- Services End -->
@@ -263,7 +220,7 @@
         </div>
         <div class="col-lg-6" style="min-height: 400px;">
             <div class="position-relative h-100">
-                <img class="position-absolute w-100 h-100" src="{{url('asset/img/quote.jpg" style="object')}}-fit: cover;">
+                <img class="position-absolute w-100 h-100" src="{{url('asset/img/quote.jpg')}}" style="object-fit: cover;">
             </div>
         </div>
     </div>
@@ -278,33 +235,17 @@
         <hr class="w-25 mx-auto bg-primary">
     </div>
     <div class="row g-5">
+        @foreach($member as $member)
         <div class="col-lg-4">
             <div class="team-item position-relative overflow-hidden">
-                <img class="img-fluid w-100" src="{{url('asset/img/team-')}}1.jpg" alt="">
+                <img class="img-fluid w-100" src="{{$member->photo}}" alt="">
                 <div class="team-text w-100 position-absolute top-50 text-center bg-primary p-4">
-                    <h3 class="text-white">Full Name</h3>
-                    <p class="text-white text-uppercase mb-0">Designation</p>
+                    <h3 class="text-white">{{$member->name}}</h3>
+                    <p class="text-white text-uppercase mb-0">{{$member->position}}</p>
                 </div>
             </div>
         </div>
-        <div class="col-lg-4">
-            <div class="team-item position-relative overflow-hidden">
-                <img class="img-fluid w-100" src="{{url('asset/img/team-')}}2.jpg" alt="">
-                <div class="team-text w-100 position-absolute top-50 text-center bg-primary p-4">
-                    <h3 class="text-white">Full Name</h3>
-                    <p class="text-white text-uppercase mb-0">Designation</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4">
-            <div class="team-item position-relative overflow-hidden">
-                <img class="img-fluid w-100" src="{{url('asset/img/team-')}}3.jpg" alt="">
-                <div class="team-text w-100 position-absolute top-50 text-center bg-primary p-4">
-                    <h3 class="text-white">Full Name</h3>
-                    <p class="text-white text-uppercase mb-0">Designation</p>
-                </div>
-            </div>
-        </div>
+         @endforeach
     </div>
 </div>
 <!-- Team End -->
@@ -315,7 +256,7 @@
     <div class="row g-0">
         <div class="col-lg-6" style="min-height: 500px;">
             <div class="position-relative h-100">
-                <img class="position-absolute w-100 h-100" src="{{url('asset/img/testimonial.jpg" style="object')}}-fit: cover;">
+                <img class="position-absolute w-100 h-100" src="{{url('asset/img/testimonial.jpg')}}" style="object'-fit: cover;">
             </div>
         </div>
         <div class="col-lg-6 py-6 px-5">
@@ -324,7 +265,7 @@
                 <div class="testimonial-item">
                     <p class="fs-4 fw-normal mb-4"><i class="fa fa-quote-left text-primary me-3"></i>Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat dolor rebum sit ipsum.</p>
                     <div class="d-flex align-items-center">
-                        <img class="img-fluid rounded-circle" src="{{url('asset/img/testimonial-')}}1.jpg" alt="">
+                        <img class="img-fluid rounded-circle" src="{{url('asset/img/testimonial-1.jpg')}}" alt="">
                         <div class="ps-4">
                             <h3>Client Name</h3>
                             <span class="text-uppercase">Profession</span>
@@ -334,7 +275,7 @@
                 <div class="testimonial-item">
                     <p class="fs-4 fw-normal mb-4"><i class="fa fa-quote-left text-primary me-3"></i>Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat dolor rebum sit ipsum.</p>
                     <div class="d-flex align-items-center">
-                        <img class="img-fluid rounded-circle" src="{{url('asset/img/testimonial-')}}2.jpg" alt="">
+                        <img class="img-fluid rounded-circle" src="{{url('asset/img/testimonial-2.jpg')}}" alt="">
                         <div class="ps-4">
                             <h3>Client Name</h3>
                             <span class="text-uppercase">Profession</span>
@@ -358,7 +299,7 @@
         <div class="col-lg-4">
             <div class="blog-item">
                 <div class="position-relative overflow-hidden">
-                    <img class="img-fluid" src="{{url('asset/img/blog-')}}1.jpg" alt="">
+                    <img class="img-fluid" src="{{url('asset/img/blog-1.jpg')}}" alt="">
                 </div>
                 <div class="bg-secondary d-flex">
                     <div class="flex-shrink-0 d-flex flex-column justify-content-center text-center bg-primary text-white px-4">
